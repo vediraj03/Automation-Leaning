@@ -32,6 +32,12 @@ public class ViewLeadsPage extends ProjectSpecificMethod {
 		return new DuplicateLeadPage();
 	}
 	
+	public FindLeadsPage clickOnFindLeadsMergeP() {
+		driver.findElementByLinkText("Find Leads").click();
+		return new FindLeadsPage();
+	}
+	
+	
 	
 	public DuplicateLeadPage verifyDuplicateLead() {
 		

@@ -15,5 +15,11 @@ public class MyLeadsPage extends ProjectSpecificMethod{
 		driver.findElement(By.xpath("//a[text()='Find Leads']")).click();
 		return new FindLeadsPage();
 	}
+	public MergeLeadsPage clickOnMergeLeads() {
+		driver.findElementByLinkText("Merge Leads").click();
+		return new MergeLeadsPage();
+	}
+	
+	
 
 }

@@ -15,7 +15,7 @@ public class EditLeadTestCase extends ProjectSpecificMethod{
 	}
 	
 	@Test(priority=2,dataProvider="fechData")
-	public void tc002_EditLead(String uName,String password,String firstName,String uCompanyName) {
+	public void tc002_EditLead(String uName,String password,String firstName,String uCompanyName) throws InterruptedException {
 		
 		new LoginPage()
 		.enterUserName(uName)
