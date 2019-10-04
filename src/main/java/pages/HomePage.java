@@ -12,7 +12,7 @@ public class HomePage extends ProjectSpecificMethod {
 		return new LoginPage();
 	}
 	
-	public MyHomePage CRM() {
+	public MyHomePage clickOnCRMLink() {
 		driver.findElement(By.linkText("CRM/SFA")).click();
 		return new MyHomePage();
 	}

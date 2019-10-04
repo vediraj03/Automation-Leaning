@@ -36,7 +36,7 @@ public class ProjectSpecificMethod {
 		driver.close();
 	}
 	
-	@DataProvider(name="feachData")
+	@DataProvider(name="fechData")
 	public Object[][] getData() throws IOException{
 		
 	Object[][] readData = ExcelRead.readExcelData(excelFileName, sheetName);

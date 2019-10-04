@@ -14,18 +14,18 @@ public class EditLeadTestCase extends ProjectSpecificMethod{
 		sheetName ="EditLead";
 	}
 	
-	@Test(dataProvider="feachData")
+	@Test(priority=2,dataProvider="fechData")
 	public void tc002_EditLead(String uName,String password,String firstName,String uCompanyName) {
 		
 		new LoginPage()
 		.enterUserName(uName)
 		.eneterPassword(password)
 		.clickLogin()
-		.CRM()
+		.clickOnCRMLink()
 		.clickLeads()
 		.clickOnFindLeads()
 		.enterFirstName(firstName)
-		.clickOnFindLeads()
+		.clickOnFindLeadsButton()
 		.clickFirstLeadRecord()
 		.clickEdit()
 		.updateCompanyName(uCompanyName)

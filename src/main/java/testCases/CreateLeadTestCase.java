@@ -1,5 +1,7 @@
 package testCases;
 
+
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -15,19 +17,21 @@ public class CreateLeadTestCase extends ProjectSpecificMethod {
 		
 	}
 	
-	@Test(dataProvider="feachData")
-	public void tC001_CreateLead(String uName, String password,String CompanyName,String firstName,String lastName) {
+	@Test(priority=1,dataProvider="fechData")
+	public void tC001_CreateLead(String uName, String password,String CompanyName,String firstName,String lastName,String phoneNo, String email) {
 		
 		new LoginPage()
 		.enterUserName(uName)
 		.eneterPassword(password)
 		.clickLogin()
-		.CRM()
+		.clickOnCRMLink()
 		.clickLeads()
 		.clickCreateLead()
 		.enterCompanyName(CompanyName)
 		.enterFirstName(firstName)
 		.enetrLastName(lastName)
+		.enetrPhoneNumber(phoneNo)
+		.enetrEmailId(email)
 		.clickCreateLead()
 		.verifyCreateLeadFname(firstName);
 

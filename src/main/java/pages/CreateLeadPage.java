@@ -23,6 +23,17 @@ public class CreateLeadPage extends ProjectSpecificMethod {
 		
 	}
 	
+	public CreateLeadPage enetrPhoneNumber(String phoneNo) {
+		driver.findElementById("createLeadForm_primaryPhoneNumber").sendKeys(phoneNo);
+		return this;
+		
+	}
+	public CreateLeadPage enetrEmailId(String email) {
+		driver.findElementById("createLeadForm_primaryEmail").sendKeys(email);
+		return this;
+		
+	}
+	
 	public ViewLeadsPage clickCreateLead() {
 		driver.findElement(By.xpath("//input[@name='submitButton']")).click();
 		return new ViewLeadsPage();

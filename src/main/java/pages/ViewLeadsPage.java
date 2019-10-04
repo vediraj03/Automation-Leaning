@@ -25,6 +25,29 @@ public class ViewLeadsPage extends ProjectSpecificMethod {
 		return new OpenTapsCRMPage();
 	}
 	
+	
+	public DuplicateLeadPage clickDuplicate() {
+		
+		driver.findElementByXPath("//a[text()='Duplicate Lead']").click();
+		return new DuplicateLeadPage();
+	}
+	
+	
+	public DuplicateLeadPage verifyDuplicateLead() {
+		
+		String firstNameViewLead = driver.findElementByXPath("(//span[text()='First name']//following::span)[1]").getText();
+		System.out.println(firstNameViewLead);
+		System.out.println("Duplicate creation Page first Name"+DuplicateLeadPage.firstNameDuptext);
+		if(DuplicateLeadPage.firstNameDuptext.equalsIgnoreCase(firstNameViewLead)){
+			System.out.println(DuplicateLeadPage.firstNameDuptext+" First name validated sucessfully: "+firstNameViewLead);
+		}
+		return new DuplicateLeadPage();
+	}
+	public MyLeadsPage clickOnDelete() {
+		
+		driver.findElementByXPath("//a[text()='Delete']").click();	
+		return new MyLeadsPage();
+	}
 	public ViewLeadsPage verifyUpatedCompanyName(String uCompanyName) {
 		
 		String eleUpdatedCompany = driver.findElementByXPath("//span[text()='Company Name']/following::span").getText();
